@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="light">
 
 <head>
     <meta charset="UTF-8">
@@ -11,12 +11,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 
-<body>
+<body class="">
     <div class="bg-white text-gray-900">
-        <header class="absolute inset-x-0 top-0 z-50 border-b ">
-            <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+        <header class="relative inset-x-0 top-0 z-50 border-b ">
+            <nav class="bg-white flex items-center justify-between p-6 lg:px-8" aria-label="Global">
                 <div class="flex lg:flex-1">
-                    <a href="#" class="-m-1.5 p-1.5">
+                    <a href="?" class="-m-1.5 p-1.5">
                         <span class="sr-only">Your Company</span>
                         <h3 class="text-gray-900 text-lg font-bold">Masoem Store</h3>
                     </a>
@@ -30,7 +30,7 @@
                     </button>
                 </div>
                 <div class="hidden lg:flex lg:gap-x-12">
-                    <a href="#" class="text-sm font-semibold leading-6 text-gray-900 hover:text-blue-500 hover:transition-all ease-in-out">Produk</a>
+                    <a href="?page=data_product" class="text-sm font-semibold leading-6 text-gray-900 hover:text-blue-500 hover:transition-all ease-in-out">Produk</a>
                     <a href="#" class="text-sm font-semibold leading-6 text-gray-900 hover:text-blue-500 hover:transition-all ease-in-out">Transaksi</a>
                 </div>
                 <div class="lg:flex lg:flex-row lg:flex-1 lg:justify-end">
@@ -41,8 +41,20 @@
                 </div>
             </nav>
         </header>
-
-
+        <div>
+            <?php
+            if (isset($_GET['page'])) {
+                $pages = $_GET['page'];
+                switch ($pages) {
+                    case 'data_product':
+                        include "./pages/product/product.php";
+                        break;
+                }
+            } else {
+                include "./pages/dashboard.php";
+            }
+            ?>
+        </div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
