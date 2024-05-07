@@ -7,6 +7,6 @@
 </head>
 <body>
     <div class="nav">tes header</div>
-    <section>section</section>
+    
 </body>
 </html>
