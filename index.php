@@ -6,6 +6,7 @@
     <title>MS-Store | Juaranya Hp Flagship Murah</title>
 </head>
 <body>
-    set
+    <div class="nav">tes header</div>
+    <section>section</section>
 </body>
 </html>
