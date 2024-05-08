@@ -37,7 +37,7 @@
                 <div class="hidden lg:flex lg:flex-row lg:flex-1 lg:justify-end">
                     <div class="flex-col">
                         <p class="text-gray-900 text-sm font-semibold ">Alvin Noval Mazzaky - 20231020027</p>
-                        <p class="text-gray-900 text-sm font-semibold ">Rifqi Aqila Ma'soem - 20231020027</p>
+                        <p class="text-gray-900 text-sm font-semibold ">Rifqi Aqila Ma'shum - 20231020046</p>
                     </div>
                 </div>
             </nav>
@@ -52,6 +52,12 @@
                         break;
                     case 'add_product':
                         include "./pages/product/add.php";
+                        break;
+                    case 'edit_product':
+                        include "./pages/product/edit.php";
+                        break;
+                    case 'delete_product':
+                        include "./pages/product/delete.php";
                         break;
                     case 'data_transaksi':
                         include "./pages/transaksi/transaksi.php";
