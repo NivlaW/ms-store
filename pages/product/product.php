@@ -51,6 +51,9 @@
                         </tr>
                     </thead>
                     <tbody>
+
+
+
                         <tr class="border-b">
                             <td class="p-4 w-4">
                                 <div class="flex items-center">
@@ -88,6 +91,26 @@
                                 </div>
                             </td>
                         </tr>
+
+                        <?php
+                        include 'koneksi.php';
+                        $no = 1;
+                        $ambilData = mysqli_query($connect, "select * from tbl_produk");
+                        while ($data = mysqli_fetch_array($ambilData)) {
+                            echo "<tr>";
+                            echo "<td>$no</td>";
+                            echo "<td>$data[nama_produk]</td>";
+                            echo "<td>$data[merk]</td>";
+                            echo "<td>$data[deskripsi]</td>";
+                            echo "<td>$data[foto]</td>";
+                            echo "<td>$data[harga]</td>";
+                            // echo "<td><a href='' class='btn btn-warning'>Edit</a> <a href='' onclick='' class='btn btn-danger'></a></td>";
+                        }
+                        ?>
+
+
+
+
                     </tbody>
                 </table>
             </div>
