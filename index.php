@@ -42,13 +42,16 @@
                 </div>
             </nav>
         </header>
-        <div class="pt-5 bg-gray-50">
+        <div class="pt-5 bg-gray-50 h-100">
             <?php
             if (isset($_GET['page'])) {
                 $pages = $_GET['page'];
                 switch ($pages) {
                     case 'data_product':
                         include "./pages/product/product.php";
+                        break;
+                    case 'add_product':
+                        include "./pages/product/add.php";
                         break;
                     case 'data_transaksi':
                         include "./pages/transaksi/transaksi.php";
