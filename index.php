@@ -30,10 +30,11 @@
                     </button>
                 </div>
                 <div class="hidden lg:flex lg:gap-x-12">
+                    <a href="?" class="text-sm font-semibold leading-6 text-gray-900 hover:text-blue-500 hover:transition-all ease-in-out">Beranda</a>
                     <a href="?page=data_product" class="text-sm font-semibold leading-6 text-gray-900 hover:text-blue-500 hover:transition-all ease-in-out">Produk</a>
-                    <a href="#" class="text-sm font-semibold leading-6 text-gray-900 hover:text-blue-500 hover:transition-all ease-in-out">Transaksi</a>
+                    <a href="?page=data_transaksi" class="text-sm font-semibold leading-6 text-gray-900 hover:text-blue-500 hover:transition-all ease-in-out">Transaksi</a>
                 </div>
-                <div class="lg:flex lg:flex-row lg:flex-1 lg:justify-end">
+                <div class="hidden lg:flex lg:flex-row lg:flex-1 lg:justify-end">
                     <div class="flex-col">
                         <p class="text-gray-900 text-sm font-semibold ">Alvin Noval Mazzaky - 20231020027</p>
                         <p class="text-gray-900 text-sm font-semibold ">Rifqi Aqila Ma'soem - 20231020027</p>
@@ -41,13 +42,16 @@
                 </div>
             </nav>
         </header>
-        <div>
+        <div class="pt-5 bg-gray-50">
             <?php
             if (isset($_GET['page'])) {
                 $pages = $_GET['page'];
                 switch ($pages) {
                     case 'data_product':
                         include "./pages/product/product.php";
+                        break;
+                    case 'data_transaksi':
+                        include "./pages/transaksi/transaksi.php";
                         break;
                 }
             } else {
