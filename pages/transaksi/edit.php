@@ -1,3 +1,9 @@
+<?php
+include "koneksi.php";
+$sql = mysqli_query($connect, "select * from tbl_transaksi where id_transaksi = '$_GET[id]'");
+$row = mysqli_fetch_array($sql);
+?>
+
 <div class="mx-auto max-w-screen-2xl h-screen px-4 lg:px-12">
     <div class="flex flex-col items-center justify-center mb-10">
         <h2 class="text-[4em] font-bold">MS Store</h2>
@@ -13,7 +19,7 @@
                         <label for="konsumen" class="block text-sm font-medium leading-6 text-gray-900">Nama
                             Pembeli</label>
                         <div class="relative mt-2 rounded-md shadow-sm">
-                            <input type="text" name="konsumen" id="konsumen"
+                            <input type="text" name="konsumen" id="konsumen" value="<?php echo "$row[konsumen]"; ?>"
                                 class="block w-full rounded-md border-0 py-1.5 px-3 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                                 placeholder="Nama Pembeli">
                         </div>
@@ -22,7 +28,7 @@
                         <label for="tgl" class="block text-sm font-medium leading-6 text-gray-900">Tanggal
                             Pembelian</label>
                         <div class="relative mt-2 rounded-md shadow-sm">
-                            <input type="date" name="tgl" id="tgl"
+                            <input type="date" name="tgl" id="tgl" value="<?php echo "$row[tgl]"; ?>"
                                 class="block w-full rounded-md border-0 py-1.5 px-3 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                                 placeholder="Merk Produk">
                         </div>
@@ -45,3 +51,18 @@
     </div>
 
 </div>
+
+
+<?php
+if ($_SERVER['REQUEST_METHOD'] == "POST") {
+    include "koneksi.php";
+
+    $query = mysqli_query($connect, "Update tbl_transaksi set konsumen='$_POST[konsumen]', tgl='$_POST[tgl]' where id_transaksi = '$_GET[id]'");
+        
+        echo "<script language='JavaScript'>
+            alert('Data Berhasil Ditambahkan');
+            document.location='?page=data_transaksi';
+        </script>";
+
+}
+?>

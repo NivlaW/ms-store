@@ -68,6 +68,9 @@
                     case 'edit_transaksi':
                         include "./pages/transaksi/edit.php";
                         break;
+                    case 'delete_transaksi':
+                        include "./pages/transaksi/delete.php";
+                        break;
                 }
             } else {
                 include "./pages/dashboard.php";
