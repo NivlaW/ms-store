@@ -32,7 +32,7 @@ $data_product = mysqli_query($connect, "select * from tbl_produk");
                         </button>
                         <div id="actionsDropdown" class="hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow :bg-gray-700 :divide-gray-600">
                             <div class="py-1">
-                                <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 :hover:bg-gray-600 :text-gray-200 :hover">Delete all</a>
+                                <button onclick="javascript: return confirm('apakah anda ingin menghapus data ini..?')" id="btn-delete" name="btn_delete" type="submit" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 :hover:bg-gray-600 :text-gray-200 :hover">Delete all</button>
                             </div>
                         </div>
                     </div>
@@ -61,7 +61,7 @@ $data_product = mysqli_query($connect, "select * from tbl_produk");
                         <tr class="border-b">
                             <td class="p-4 w-4">
                                 <div class="flex items-center">
-                                    <input id="checkbox-table-search-1" type="checkbox" onclick="event.stopPropagation()" class="w-4 h-4 text-primary-600 bg-gray-100 rounded border-gray-300 focus:ring-primary-500 :focus:ring-primary-600 :ring-offset-gray-800 focus:ring-2 :bg-gray-700 ">
+                                    <input id="checkbox-table-search-1"<?php echo" name='id_produk[]' value=' {$x['id_produk']}' "?> type="checkbox" onclick="event.stopPropagation()" class="w-4 h-4 text-primary-600 bg-gray-100 rounded border-gray-300 focus:ring-primary-500 :focus:ring-primary-600 :ring-offset-gray-800 focus:ring-2 :bg-gray-700 ">
                                     <label for="checkbox-table-search-1" class="sr-only">checkbox</label>
                                 </div>
                             </td>
