@@ -67,7 +67,7 @@ $data_product = mysqli_query($connect, "select * from tbl_produk");
                             </td>
                             <th scope="row" class="px-4 py-3 font-medium text-gray-900 truncate ">
                                 <div class="flex items-center mr-3">
-                                    <img <?php echo"src='./src/images/{$x['foto']}' "?> alt="iMac Front Image" class="h-8 w-auto mr-3">
+                                    <img <?php echo"src='./src/images/foto-produk/{$x['foto']}' "?> class="h-8 w-auto mr-3">
                                     <?php echo"$x[nama_produk]" ?> 
                                 </div>
                             </th>
