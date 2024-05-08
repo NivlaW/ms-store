@@ -43,11 +43,11 @@
                                     <label for="checkbox-all" class="sr-only">checkbox</label>
                                 </div>
                             </th>
-                            <th scope="col" class="p-4">Produk</th>
-                            <th scope="col" class="p-4">Merk</th>
-                            <th scope="col" class="p-4">Deskripsi</th>
-                            <th scope="col" class="p-4">Harga</th>
-                            <th scope="col" class="p-4">Last Update</th>
+                            <th scope="col truncate overflow-hidden" class="p-4">Produk</th>
+                            <th scope="col truncate overflow-hidden" class="p-4">Merk</th>
+                            <th scope="col-4 truncate overflow-hidden" class="p-4">Deskripsi</th>
+                            <th scope="col truncate overflow-hidden" class="p-4">Harga</th>
+                            <th scope="col truncate overflow-hidden" class="p-4">Last Update</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -58,7 +58,7 @@
                                     <label for="checkbox-table-search-1" class="sr-only">checkbox</label>
                                 </div>
                             </td>
-                            <th scope="row" class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap ">
+                            <th scope="row" class="px-4 py-3 font-medium text-gray-900 truncate ">
                                 <div class="flex items-center mr-3">
                                     <img src="https://flowbite.s3.amazonaws.com/blocks/application-ui/products/imac-front-image.png" alt="iMac Front Image" class="h-8 w-auto mr-3">
                                     Apple iMac 27&#34;
@@ -67,10 +67,10 @@
                             <td class="px-4 py-3">
                                 <span class="bg-gray-300 text-primary-800 text-xs font-medium px-2 py-0.5 rounded">Apple</span>
                             </td>
-                            <td class="col-4 h-2 px-4 py-3 font-medium text-gray-900 text-ellipsis overflow-hidden">iPhone 12. Layar Super Retina XDR 6,1 inci yang begitu cerah.</td>
-                            <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap ">Rp. 9.5555.000</td>
+                            <td class="col-4 px-4 py-3 font-medium text-gray-900 text-ellipsis overflow-hidden">iPhone 12. Layar Super Retina XDR 6,1 inci yang begitu cerah</td>
+                            <td class="px-4 py-3 font-medium text-gray-900 truncate ">Rp. 9.5555.000</td>
                             
-                            <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap ">
+                            <td class="px-4 py-3 font-medium text-gray-900 truncate ">
                                 <div class="flex items-center space-x-4">
                                     <button type="button" data-drawer-target="drawer-read-product-advanced" data-drawer-show="drawer-read-product-advanced" aria-controls="drawer-read-product-advanced" class="py-2 px-3 flex items-center text-sm font-medium text-center text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-gray-200 ">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2 -ml-0.5" viewbox="0 0 20 20" fill="currentColor" aria-hidden="true">
