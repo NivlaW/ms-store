@@ -3,6 +3,10 @@ include "koneksi.php";
 $data_product = mysqli_query($connect, "select * from tbl_produk where id_produk='$_GET[id]'");
 $data = mysqli_fetch_array($data_product);
 
+$length = 16;
+$string = md5(rand());
+$randomString = substr($string, 0, $length);
+
 ?>
 <!-- Start block -->
 <div class="mx-auto max-w-screen-2xl h-screen px-4 lg:px-12">
@@ -18,7 +22,7 @@ $data = mysqli_fetch_array($data_product);
                 <div class="grid grid-cols-1 gap-y-4">
                     <div class="">
                         <div class="relative mt-2 rounded-md shadow-sm">
-                            <input type="hidden" name="id_produk" id="id_produk" value="<?php echo "$_GET[id]" ?>"
+                            <input type="hidden" name="id_produk" id="id_produk" value="<?php echo "$_GET[id]"; ?>"
                                 class="block w-full rounded-md border-0 py-1.5 px-3 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                                 placeholder="Masukkan nama Produk">
                         </div>
@@ -27,8 +31,8 @@ $data = mysqli_fetch_array($data_product);
                         <label for="no_transaksi" class="block text-sm font-medium leading-6 text-gray-900">No
                             Transaksi</label>
                         <div class="relative mt-2 rounded-md shadow-sm">
-                            <input type="text" name="no_transaksi" id="no_transaksi" value="" disabled
-                                class="disabled block w-full rounded-md border-0 py-1.5 px-3 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                            <input type="text" name="no_transaksi" id="no_transaksi" value="<?php echo $randomString; ?>" readonly
+                                class="block w-full rounded-md border-0 py-1.5 px-3 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                                 placeholder="Merk Produk">
                         </div>
                     </div>

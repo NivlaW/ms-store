@@ -5,7 +5,7 @@ $row = mysqli_fetch_array($query);
 
 mysqli_query($connect, "delete from tbl_produk where id_produk = '$_GET[id]'");
 
-unlink('../../src/images/'.$row['foto']);
+unlink('./src/images/foto-produk/'.$row['foto']);
 
 echo"<script language = 'Javascript'>
         alert('Data Berhasil Dihapus');
