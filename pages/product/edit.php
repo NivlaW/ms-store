@@ -51,7 +51,7 @@ $row = mysqli_fetch_array($sql);
                         <div class="">
                             <label for="deskripsi" class="block text-sm font-medium leading-6 text-gray-900">Deskripsi</label>
                             <div class="relative mt-2 rounded-md shadow-sm">
-                                <textarea class="block w-full rounded-md border-0 py-1.5 px-3 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" name="deskripsi" value="<?php echo "$row[deskripsi]"; ?>" id="deskripsi" cols="30" rows="5"></textarea>
+                                <textarea class="block w-full rounded-md border-0 py-1.5 px-3 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" name="deskripsi"  id="deskripsi" cols="30" rows="5"><?php echo "$row[deskripsi]"; ?></textarea>
                             </div>
                         </div>
                         <div class="">

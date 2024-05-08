@@ -59,6 +59,9 @@
                     case 'delete_product':
                         include "./pages/product/delete.php";
                         break;
+                    case 'multi_delete1':
+                        include "./pages/product/deleteAll.php";
+                        break;
                     case 'data_transaksi':
                         include "./pages/transaksi/transaksi.php";
                         break;
@@ -70,6 +73,9 @@
                         break;
                     case 'delete_transaksi':
                         include "./pages/transaksi/delete.php";
+                        break;
+                    case 'multi_delete2':
+                        include "./pages/transaksi/deleteAll.php";
                         break;
                 }
             } else {
