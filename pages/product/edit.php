@@ -2,7 +2,6 @@
 include "koneksi.php";
 $sql = mysqli_query($connect, "select * from tbl_produk where id_produk = '$_GET[id]'");
 $row = mysqli_fetch_array($sql);
-
 ?>
 
 
