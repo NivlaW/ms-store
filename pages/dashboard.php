@@ -1,4 +1,4 @@
-<div class="mx-auto max-w-screen-2xl h-screen px-4 lg:px-12">
+<div class="mx-auto max-w-screen-2xl px-4 lg:px-12">
   <div class="flex flex-col items-center justify-center mb-10">
     <h2 class="text-[4em] font-bold">MS Store</h2>
     <h5 class="text-lg font-semibold">
