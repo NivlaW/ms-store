@@ -11,7 +11,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 
-<body class="">
+<body class="bg-gray-50">
     <div class="bg-white text-gray-900">
         <header class="sticky inset-x-0 top-0 z-50 border-b ">
             <nav class="bg-white flex items-center justify-between p-6 lg:px-8" aria-label="Global">
@@ -42,7 +42,7 @@
                 </div>
             </nav>
         </header>
-        <div class="pt-5 bg-gray-50 h-100">
+        <div class="pt-5 bg-gray-50">
             <?php
             if (isset($_GET['page'])) {
                 $pages = $_GET['page'];
@@ -55,6 +55,9 @@
                         break;
                     case 'data_transaksi':
                         include "./pages/transaksi/transaksi.php";
+                        break;
+                    case 'add_transaksi':
+                        include "./pages/transaksi/add.php";
                         break;
                 }
             } else {

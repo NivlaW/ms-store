@@ -1,4 +1,4 @@
-<!-- Start block -->
+
 <section class="my-auto sm:p-5 antialiased">
     <div class="mx-auto max-w-screen-2xl h-screen px-4 lg:px-12">
         <div class="bg-white relative shadow-md sm:rounded-lg overflow-hidden">

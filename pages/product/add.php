@@ -92,7 +92,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $file_tmp = $_FILES['foto']['tmp_name'];
     $n_random = rand(1, 9999);
     $nama_baru = $n_random . '-' . $nama;
-    $folder = "./src/images/foto-produk";
+    $folder = "./src/images/foto-produk/";
 
     move_uploaded_file($file_tmp, $folder . $nama_baru);
 
